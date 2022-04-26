@@ -1,0 +1,148 @@
+input[type="radio"] { display: none; }
+
+input[type="radio"]:checked + section { display: block; }
+
+.speechbox {
+  max-width: 75%;
+  margin: 10px auto;
+  border: 4px solid #fff;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+}
+
+/* speech bubble arrow */
+.sb:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  right: 50%;
+  bottom: -23px;
+}
+
+#testimonials .slider {
+  position: relative;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider section {
+  position: relative;
+  display: none;
+  height: 90%;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider section h1 {
+  margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.slider section p {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.slider section label {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5em;
+  bottom: 0;
+}
+
+.slider section label:nth-child(odd) { right: 120px; }
+
+.slider section label:nth-child(even) { left: 120px; }
+
+.slider section > i {
+  font-size: 6em !important;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.slider-buttons {
+  position: relative;
+  padding-top: 30px;
+}
+
+/* favorite button */
+
+.fav {
+  position: relative;
+}
+
+.fav i {
+  cursor:pointer;
+  padding:10px 12px 8px;
+  background:#fff;
+  border-radius:50%;
+  display:inline-block;
+  margin:0 0 15px;
+  color:#aaa;
+  transition:.2s;
+}
+
+.fav i:hover {
+  color:#666;
+}
+
+.fav i:before {
+  font-family:fontawesome;
+  content:'\f004';
+  font-style:normal;
+}
+
+.fav span {
+  position: absolute;
+  width: auto;
+  bottom:70px;
+  left:0;
+  right:0;
+  visibility: hidden;
+  transition:.6s;
+  z-index:-2;
+  font-size:2px;
+  color:#fff;
+  font-weight:400;
+}
+
+.fav i.press {
+  animation: size .4s;
+  color:#e23b3b;
+}
+
+.fav span.press {
+  bottom:120px;
+  font-size:14px;
+  visibility:visible;
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  0% {color:#transparent;}
+  50% {color:#e23b3b;}
+  100% {color:#transparent;}
+}
+
+@keyframes size {
+  0% {padding:10px 12px 8px;}
+  50% {padding:14px 16px 12px;
+    margin-top:-4px;}
+  100% {padding:10px 12px 8px;}
+}
