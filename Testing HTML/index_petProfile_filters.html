@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+    <title>Paw Patrol</title>
+    <!--
+    Lava Landing Page
+    https://templatemo.com/tm-540-lava-landing-page
+    -->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lava.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+</head>
+<body>
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        Paw Patrol
+                    </a>
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="index.html#testimonials" class="">MEET THE ANIMALS</a>
+                        </li>
+                        <li class="scroll-to-section"><a href="View Favorites.html">VIEW FAVORITES</a></li>
+                        <li class="scroll-to-section"><a href="View Photo Collection.html">VIEW PHOTO COLLECTION</a>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+    <!-- ***** Header Text Start ***** -->
+    <div class="header-text">
+        <div class="container">
+            <div class="row">
+                <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <h1>Prioritize the animals who need us <em>MOST</em></h1>
+                    <p> Here at Paw Patrol, we are focused on the animals who have been in the shelter
+                        the longest. As animals spend an increasingly long time in the shelters, they are less likely to
+                        be adopted which results in unjust euthanization.
+                        With Paw Patrol, these overlooked animals will finally be able to get the priority and emphasis
+                        they need and deserve. We aim to help the animals
+                        in need, but we need your help.</p>
+                    <a href="creditcard.html" class="main-button">
+                        Credit Card Button
+                    </a>
+                    <a href="signup.html" class="main-button">
+                        Sign UP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Header Text End ***** -->
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+<!-- ***** Testimonials Starts ***** -->
+<section class="section" id="testimonials">
+
+    <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+</script>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="center-heading">
+                    <h2>Meet the animals who need <em>YOU</em></h2>
+                    <p>Approximately 3.3 million dogs enter U.S. animal shelters nationwide every year.
+                        Unfortunately, 1.5 million shelter animals are estimated to be euthanized per year. Help lower
+                        these statistics by applying to adopt the pets featured
+                        below! </p>
+                </div>
+            </div>
+            </div>
+
+            <div id="myBtnContainer">
+                <div class="col-lg-10 col-md-12 col-sm-12 mobile-bottom-fix-big"
+                 data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <div class="container">
+                    <div class="multifilter-gallery-wrap">
+                        <div class="row">
+                            <div class="center">
+                                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                    <ul class="multifilter-gallery-nav nav">
+
+                                        <!-- TYPE -->
+
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="main-button" data-toggle="dropdown" role="button"
+                                               aria-haspopup="true" aria-expanded="false">Type</a>
+                                            <ul class="dropdown-menu not-close-dropdown" data-display="static">
+                                                <li class="multifilter-gallery-button">
+                                                    <input type="checkbox" value="on">
+                                                    <button class="btn" onclick="filterSelection('dog')">
+                                                    Dog
+                                                        </button>
+                                                </li>
+                                                <li class="multifilter-gallery-button">
+                                                    <input type="checkbox" value="on">
+                                                    <button class="btn" onclick="filterSelection('cat')">
+                                                    Cat
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- SIZE -->
+
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="main-button" data-toggle="dropdown" role="button"
+                                               aria-haspopup="true" aria-expanded="true" data-display="static">Size</a>
+                                            <ul class="dropdown-menu not-close-dropdown">
+                                                <li class="multifilter-gallery-button"
+                                                    onclick="filterSelection('small')">
+                                                    <input type="checkbox">
+                                                    Small
+                                                </li>
+                                                <li class="multifilter-gallery-button"
+                                                    onclick="filterSelection('medium')">
+                                                    <input type="checkbox">
+                                                    Medium
+                                                </li>
+                                                <li class="multifilter-gallery-button"
+                                                    onclick="filterSelection('large')">
+                                                    <input type="checkbox">
+                                                    Large
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- DISTANCE -->
+
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="main-button" data-toggle="dropdown" role="button"
+                                               aria-haspopup="true" aria-expanded="false">Distance</a>
+                                            <ul class="dropdown-menu not-close-dropdown" data-display="static">
+                                                <li class="multifilter-gallery-button" onclick="filterSelection('20')">
+                                                    <input type="checkbox" value="on">
+                                                    20 miles or less
+                                                </li>
+                                                <li class="multifilter-gallery-button" onclick="filterSelection('50')">
+                                                    <input type="checkbox" value="on">
+                                                    20-50 miles
+                                                </li>
+                                                <li class="multifilter-gallery-button" onclick="filterSelection('150')">
+                                                    <input type="checkbox" value="on">
+                                                    50-150 miles
+                                                </li>
+                                                <li class="multifilter-gallery-button"
+                                                    onclick="filterSelection('anywhere')">
+                                                    <input type="checkbox" value="on">
+                                                    Any distance
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a href="#" class="main-button" data-toggle="dropdown" role="button"
+                                               aria-haspopup="true" aria-expanded="false">Other</a>
+                                            <ul class="dropdown-menu not-close-dropdown" data-display="static">
+                                                <li class="multifilter-gallery-button" data-filter="hypoallergenic">
+                                                    <input type="checkbox" value="on">
+                                                    Hypoallergenic
+                                                </li>
+                                                <li class="multifilter-gallery-button" data-filter="kids">
+                                                    <input type="checkbox" value="on">
+                                                    Good with kids
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a class="main-button" style="color: rgb(255,255,255)">Apply Filters</a>
+                                        </li>
+
+
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--end portfolio grid -->
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+
+                <div class="container">
+            <div class="col-lg-10 col-md-12 col-sm-12 mobile-bottom-fix-big"
+                 data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <div class="owl-carousel owl-theme">
+                    <div class="filterDiv dog">
+                        <div class="item service-item">
+                            <div class="testimonial-content">
+                                <div class="author">
+                                    <div class="speechbox sb">
+                                        <div class="filterDiv dog">
+                                        <p>“Hi nice to meet you! My name is Sally! Will you be my family? I have been in
+                                            the shelter 60 days.
+                                            I love treats and running in the yard.”</p>
+                                    </div>
+                                        </div>
+                                    <i><img src="assets/images/sally.png" alt="Author One"></i>
+                                </div>
+                                <h4>Sally</h4>
+                                <span>Shelter 60 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv dog">
+                        <div class="item service-item">
+                            <div class="testimonial-content">
+                                <div class="author">
+                                    <div class="speechbox sb">
+                                        <p>“Hi, I'm Teresa! I am a very energetic, loving, and playful dog! I shows my
+                                            love by jumping
+                                            or giving kisses on the arm or hand. I enjoys being outside, chasing after
+                                            tennis balls,
+                                            and chewing on dog toys. My favorite thing in the world is to be running and
+                                            playing with
+                                            other dogs. I also loves the water!”</p>
+                                    </div>
+                                    <i><img src="assets/images/teresa.png" alt="Author One"></i>
+                                </div>
+                                <h4>Tereasa</h4>
+                                <span>Shelter 59 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv cat">
+                        <div class="item service-item">
+                            <div class="author">
+                                <i><img src="cat1.png" alt="Author Third"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <h4>George</h4>
+                                <p>“Hi, I'm George! I am a remarkably smart boy that will make a loving and loyal
+                                    companion for my
+                                    future adopter. My ideal home will be a stable, structured environment with a safe
+                                    yard for energetic play. I am an exceptionally athletic and eager playmate who will
+                                    require a good yarn for my favorite pastime! ”</p>
+                                <span>Sheltered for 59 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv dog">
+                        <div class="item service-item">
+                            <div class="author">
+                                <i><img src="dog3.png" alt="Fourth Author"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <h4>Sir James</h4>
+                                <p>"Hi, I'm Sir James, and I am looking for someone to sit on the couch and eat snacks
+                                    with
+                                    all day. I may not make the best running partner, but I make an amazing cuddling
+                                    partner!
+                                    Although I am an expert at snuggling, I also takes his playtime very seriously.
+                                    I loves playing tug and have a talent for extracting the squeaker from just about
+                                    any toy."</p>
+                                <span>Sheltered for 58 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv cat">
+                        <div class="item service-item">
+                            <div class="author">
+                                <i><img src="cat2.png" alt="Author One"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <h4>Carbon</h4>
+                                <p>“Hi nice to meet you I am Carbon! Will you be my family? I have been in the shelter
+                                    56 days.
+                                    I am energetic, so get ready for some play time!”</p>
+                                <span>Sheltered for 56 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filterDiv cat">
+                        <div class="item service-item">
+                            <div class="author">
+                                <i><img src="cat3.png" alt="Author One"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <h4>Cooper</h4>
+                                <p>“Hi nice to meet you I am Cooper! Will you be my family? I have been in the shelter
+                                    50 days. I love my naps!”</p>
+                                <span>Sheltered for 50 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+<!-- ***** Testimonials Ends ***** -->
+
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" id="View Favorites">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                 data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <div class="features-item">
+                    <div class="features-icon">
+                        <h2>01</h2>
+                        <img src="assets/images/features-icon-1.png" alt="">
+                        <h4>Trend Analysis</h4>
+                        <p>Curabitur pulvinar vel odio sed sagittis. Nam maximus ex diam, nec consectetur diam.</p>
+                        <a href="#View Photo Collection" class="main-button">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="sub-footer">
+            <p>Copyright &copy; 2020 Lava Landing Page
+                | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+        </div>
+    </div>
+</div>
+</div>
+</footer>
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Plugins -->
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="js/filterdiv.js"></script>
+
+<script src="assets/js/imgfix.min.js"></script>
+<!-- Global Init -->
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

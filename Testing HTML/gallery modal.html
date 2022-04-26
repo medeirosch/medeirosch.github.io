@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+    <title>Paw Patrol</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lava.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+
+    <script>
+      $(function() {
+        $( ".fav i" ).click(function() {
+          $( ".fav i,.fav span" ).toggleClass( ".fav press", 1000 );
+        });
+      });
+
+    </script>
+
+    <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+    </script>
+
+</head>
+
+<body>
+<!-- ***** Preloader Start ***** -->
+<div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        Paw Patrol
+                    </a>
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="index.html#testimonials" class="">MEET THE ANIMALS</a>
+                        </li>
+                        <li class="scroll-to-section"><a href="View Favorites.html">VIEW FAVORITES</a></li>
+                        <li class="scroll-to-section"><a href="login.html">MY ACCOUNT</a></li>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+    <!-- ***** Header Text Start ***** -->
+    <div class="header-text">
+        <div class="container">
+            <div class="row">
+                <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <h1>Prioritize the animals who need us <em>MOST</em></h1>
+                    <p> Here at Paw Patrol, we are focused on the animals who have been in the shelter
+                        the longest. As animals spend an increasingly long time in the shelters, they are less likely to
+                        be adopted which results in unjust euthanization.
+                        With Paw Patrol, these overlooked animals will finally be able to get the priority and emphasis
+                        they need and deserve. We aim to help the animals
+                        in need, but we need your help.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Header Text End ***** -->
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+
+<!-- ***** Testimonials Starts ***** -->
+<section class="section" id="testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="center-heading">
+                    <h2>Meet the animals who need <em>YOU</em></h2>
+                    <p>Approximately 6.5 million animals enter U.S. animal shelters nationwide every year.
+                        Unfortunately, 1.5 million shelter animals are estimated to be euthanized per year. Help lower
+                        these statistics by contacting the shelter to adopt the pets featured.
+                        below! </p>
+                </div>
+            </div>
+
+            <div id="myBtnContainer">
+                <h4 style="text-align:center; padding: 0px 0px 15px 0px">Filter Pets:</h4>
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('dog')" data-target="#myCarousel" data-slide-to="0">
+                    Dogs
+                </button>
+
+                <button class="btn" onclick="filterSelection('cat')" data-target="#myCarousel" data-slide-to="2">
+                    Cats
+                </button>
+
+                <button class="btn" onclick="filterSelection('hypo')" data-target="#myCarousel" data-slide-to="0">
+                    Hypoallergenic
+                </button>
+
+                <button class="btn" onclick="filterSelection('25')" data-target="#myCarousel" data-slide-to="3">
+                    < 20 miles
+                </button>
+
+                <button class="btn" onclick="filterSelection('75')" data-target="#myCarousel" data-slide-to="5">
+                    20 - 100 miles
+                </button>
+
+                <button class="btn" onclick="filterSelection('150')" data-target="#myCarousel" data-slide-to="4">
+                    > 100 miles
+                </button>
+
+                <button class="btn" onclick="filterSelection('small')" data-target="#myCarousel" data-slide-to="2">
+                    Small
+                </button>
+
+                <button class="btn" onclick="filterSelection('medium')" data-target="#myCarousel" data-slide-to="4">
+                    Medium
+                </button>
+
+                <button class="btn" onclick="filterSelection('large')" data-target="#myCarousel" data-slide-to="1">
+                    Large
+                </button>
+            </div>
+<!-- pet profile carousel starts here -->
+           <div class="slider">
+                <input id="rad1" type="radio" name="rad" checked>
+                <section>
+                    <div class="item service-item">
+                        <div class="testimonial-content">
+                            <div class="author">
+                                <div class="fav">
+                                    <i></i>
+                                    <span>liked!</span>
+                                </div>
+                                <div class="speechbox sb">
+                                    <p>“Hi nice to meet you! My name is Sally! Will you be my family? I have been in the
+                                        shelter 60 days.
+                                        I love treats and running in the yard.”</p>
+                                    <!-- <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a Treat </a> -->
+                                    <i class="fa fa-chevron-right" data-toggle="modal" data-target="#sallyModal"
+                                       style="color:black;"></i>
+                                </div>
+                                <i><img src="assets/images/sally.png" alt="Author One"></i>
+                            </div>
+                            <h4>Sally</h4>
+                            <span>Shelter 60 days</span>
+                            <div class="slider-buttons">
+                                <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a
+                                    Treat </a>
+                                <a href="#View Photo Collection" class="main-button">Contact Shelter </a>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="rad1"><i class="fa fa-chevron-left"></i></label>
+                    <label for="rad2"><i class="fa fa-chevron-right"></i></label>
+                </section>
+
+                <input id="rad2" type="radio" name="rad">
+                <section>
+                    <div class="item service-item">
+                        <div class="testimonial-content">
+                            <div class="author">
+                                <div class="fav">
+                                    <i></i>
+                                    <span>liked!</span>
+                                </div>
+                                <div class="speechbox sb">
+                                    <p>“Hi, I'm Teresa! I am a very energetic, loving, and playful dog! I shows my love
+                                        by jumping
+                                        or giving kisses on the arm or hand. I enjoys being outside, chasing after
+                                        tennis balls,
+                                        and chewing on dog toys. My favorite thing in the world is to be running and
+                                        playing with
+                                        other dogs. I also loves the water!”</p>
+                                    <i class="fa fa-chevron-right" data-toggle="modal" data-target="#teresaModal"
+                                       style="color:black;"></i>
+                                </div>
+                                <i><img src="assets/images/teresa.png" alt="Author One"></i>
+                            </div>
+                            <h4>Teresa</h4>
+                            <span>Shelter 59 days</span>
+                            <div class="slider-buttons">
+                                <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a
+                                    Treat </a>
+                                <a href="#View Photo Collection" class="main-button">Contact Shelter </a>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="rad1"><i class="fa fa-chevron-left"></i></label>
+                    <label for="rad3"><i class="fa fa-chevron-right"></i></label>
+                </section>
+
+                <input id="rad3" type="radio" name="rad">
+                <section>
+                    <div class="item service-item">
+                        <div class="testimonial-content">
+                            <div class="author">
+                                <div class="fav">
+                                    <i></i>
+                                    <span>liked!</span>
+                                </div>
+                                <div class="speechbox sb">
+                                    <p>“Hi, I'm George! I am a remarkably smart boy that will make a loving and loyal
+                                        companion for my
+                                        future adopter. My ideal home will be a stable, structured environment with a
+                                        safe
+                                        yard for energetic play. I am an exceptionally athletic and eager playmate who
+                                        will
+                                        require a good yarn for my favorite pastime!”</p>
+                                    <i class="fa fa-chevron-right" data-toggle="modal" data-target="#georgeModal"
+                                       style="color:black;"></i>
+                                </div>
+                                <i><img src="assets/images/cat1.png" alt="Author One"></i>
+                            </div>
+                            <h4>George</h4>
+                            <span>Shelter 59 days</span>
+                            <div class="slider-buttons">
+                                <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a
+                                    Treat </a>
+                                <a href="#View Photo Collection" class="main-button">Contact Shelter </a>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="rad2"><i class="fa fa-chevron-left"></i></label>
+                    <label for="rad4"><i class="fa fa-chevron-right"></i></label>
+                </section>
+
+                <input id="rad4" type="radio" name="rad">
+                <section>
+                    <div class="item service-item">
+                        <div class="testimonial-content">
+                            <div class="author">
+                                <div class="fav">
+                                    <i></i>
+                                    <span>liked!</span>
+                                </div>
+                                <div class="speechbox sb">
+                                    <p>“Hi, I'm Sir James, and I am looking for someone to sit on the couch and eat
+                                        snacks with
+                                        all day. I may not make the best running partner, but I make an amazing cuddling
+                                        partner!
+                                        Although I am an expert at snuggling, I also takes his playtime very seriously.
+                                        I loves playing tug and have a talent for extracting the squeaker from just
+                                        about any toy."</p>
+                                    <i class="fa fa-chevron-right" data-toggle="modal" data-target="#sirJamesModal"
+                                       style="color:black;"></i>
+                                </div>
+                                <i><img src="assets/images/dog3.png" alt="Author One"></i>
+                            </div>
+                            <h4>Sir James</h4>
+                            <span>Shelter 59 days</span>
+                            <div class="slider-buttons">
+                                <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a
+                                    Treat </a>
+                                <a href="#View Photo Collection" class="main-button">Contact Shelter </a>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="rad3"><i class="fa fa-chevron-left"></i></label>
+                    <label for="rad5"><i class="fa fa-chevron-right"></i></label>
+                </section>
+
+                <input id="rad5" type="radio" name="rad">
+                <section>
+                    <div class="item service-item">
+                        <div class="testimonial-content">
+                            <div class="author">
+                                <div class="fav">
+                                    <i></i>
+                                    <span>liked!</span>
+                                </div>
+                                <div class="speechbox sb">
+                                    <p>“Hi, I'm Carbon, and I am looking for someone to sit on the couch and eat snacks
+                                        with
+                                        all day. I may not make the best running partner, but I make an amazing cuddling
+                                        partner!
+                                        Although I am an expert at snuggling, I also takes his playtime very seriously.
+                                        I loves playing tug and have a talent for extracting the squeaker from just
+                                        about any toy."</p>
+                                    <i class="fa fa-chevron-right" data-toggle="modal" data-target="#carbonModal"
+                                       style="color:black;"></i>
+                                </div>
+                                <i><img src="assets/images/cat2.png" alt="Author One"></i>
+                            </div>
+                            <h4>Carbon</h4>
+                            <span>Shelter 56 days</span>
+                            <div class="slider-buttons">
+                                <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a
+                                    Treat </a>
+                                <a href="#View Photo Collection" class="main-button">Contact Shelter </a>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="rad4"><i class="fa fa-chevron-left"></i></label>
+                    <label for="rad6"><i class="fa fa-chevron-right"></i></label>
+                </section>
+
+                <input id="rad6" type="radio" name="rad">
+                <section>
+                    <div class="item service-item">
+                        <div class="testimonial-content">
+                            <div class="author">
+                                <div class="fav">
+                                    <i></i>
+                                    <span>liked!</span>
+                                </div>
+                                <div class="speechbox sb">
+                                    <p>“Hi nice to meet you I am Cooper! Will you be my family?
+                                        I have been in the shelter 50 days. I love my naps!"</p>
+                                </div>
+                                <i class="fa fa-chevron-right" data-toggle="modal" data-target="#cooperModal"
+                                   style="color:black;"></i>
+                                <i><img src="assets/images/dog3.png" alt="Author One"></i>
+                            </div>
+                            <h4>Cooper</h4>
+                            <span>Shelter 50 days</span>
+                            <div class="slider-buttons">
+                                <a href="" class="main-button" data-toggle="modal" data-target="#myModal">Give a
+                                    Treat </a>
+                                <a href="#View Photo Collection" class="main-button">Contact Shelter </a>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="rad5"><i class="fa fa-chevron-left"></i></label>
+                </section>
+            </div>
+            <!-- carousel ends -->
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+              filterSelection("all")
+              function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                  w3RemoveClass(x[i], "show");
+                  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+              }
+
+              function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                }
+              }
+
+              function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                  }
+                }
+                element.className = arr1.join(" ");
+              }
+              // Add active class to the current button (highlight it)
+              var btnContainer = document.getElementById("myBtnContainer");
+              var btns = btnContainer.getElementsByClassName("btn");
+              for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+                });
+              }
+
+</script>
+
+</div>
+</div>
+</section>
+<!-- ***** Testimonials Ends ***** -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>You can give a pet a treat by donating to the shelter. Would you like to set up payment information
+                    now? </H4>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="main-button" data-toggle="modal" data-target="#myCreditModal"
+                   data-dismiss="modal">Yes </a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No I will not give a treat</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+<!-- Modal end -->
+
+
+<!-- contact shelter mdoal -->
+<div class="modal fade" id="contactShelter" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+
+
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>Shelter Contact Information:</H4>
+                <p>Please contact the shelter using the following email address:</p>
+                <a href = "mailto: boston-adoption@arlboston.org">boston-adoption@arlboston.org</a>
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+    </div>
+</div>
+<!-- ***** Credit Card Modal ***** -->
+<div class="modal fade" id="myCreditModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <h4>Enter Information to Give a Treat</h4>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <strong>Credit Card</strong>
+                    <small>enter your card details</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="ccnumber">Credit Card Number</label>
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="0000 0000 0000 0000"
+                                           autocomplete="email">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="mdi mdi-credit-card"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="ccmonth">Month</label>
+                            <select class="form-control" id="ccmonth">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="ccyear">Year</label>
+                            <select class="form-control" id="ccyear">
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="cvv">CVV/CVC</label>
+                                <input class="form-control" id="cvv" type="text" placeholder="123">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="" class="main-button" data-toggle="modal" data-target="#myVerificationModal"
+                       data-dismiss="modal">Continue </a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Credit Card Modal end -->
+<!-- Verification Modal -->
+<div class="modal fade" id="myVerificationModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>How much would you like to donate? This donation will go towards the animal and shelter.</H4>
+                <br>
+                <select class="form-control" name="select">
+                    <option value="" selected="">Amount</option>
+                    <option value="black">$5</option>
+                    <option value="white">$10</option>
+                    <option value="gold">$15</option>
+                </select>
+                <br>
+                <label for="fname">Other</label>
+                <input type="text" id="fname" name="fname"><br><br>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="main-button" data-toggle="modal" data-target="#thanksModal" data-dismiss="modal">Give
+                    Donation </a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No I will not give a treat</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+<!-- Verification Modal end -->
+<!-- Thank You Modal -->
+<div class="modal fade" id="thanksModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>Thank You for Donating! The treats will make my day!</H4>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+<!-- Verification Modal end -->
+
+<div class="modal fade" id="sallyModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>INSERY GALLERY HERE</H4>
+                <div class="container">
+
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/sally2.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/sally3.jpeg" style="width:100%">
+
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="teresaModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>INSERY GALLERY HERE</H4>
+                <div class="container">
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/teresa2.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/teresa3.jpeg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="georgeModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>INSERY GALLERY HERE</H4>
+                <div class="container">
+
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/george2.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/george3.jpeg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sirJamesModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>INSERY GALLERY HERE</H4>
+                <div class="container">
+
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/sirjames2.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/sirjames3.jpeg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="carbonModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>INSERY GALLERY HERE</H4>
+                <div class="container">
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/carbon2.jpeg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/carbon3.jpeg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="cooperModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <H4>INSERY GALLERY HERE</H4>
+                <div class="container">
+
+
+                    <div class="mySlides">
+
+                        <img src="assets/images/henry3.png" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+
+                        <img src="assets/images/henry3.jpeg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+</div>
+</footer>
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Plugins -->
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<!-- Global Init -->
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
